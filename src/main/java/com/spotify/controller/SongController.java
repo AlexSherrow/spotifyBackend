@@ -11,14 +11,14 @@ import java.util.List;
 public class SongController {
     @Autowired
     private SongService songService;
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://alexsherrowspotifyfrontend.herokuapp.com/")
     @PostMapping("/add")
     public String add(@RequestBody Song song)
     {
         songService.saveSong(song);
         return "New Song is added";
     }
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://alexsherrowspotifyfrontend.herokuapp.com/")
     @GetMapping("/getAll")
     public List<Song> getAllSongs(){
         return songService.getAllSongs();
