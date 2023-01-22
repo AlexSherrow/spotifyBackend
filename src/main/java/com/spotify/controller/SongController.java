@@ -9,16 +9,22 @@ import java.util.List;
 @RestController
 @RequestMapping("/song")
 public class SongController {
+    //Production Credentials
+    //final String url = "https://alexsherrowspotifyfrontend.herokuapp.com";
+
+    //Local Credentials
+    final String url = "http://localhost:3000";
     @Autowired
     private SongService songService;
-    @CrossOrigin(origins = "https://alexsherrowspotifyfrontend.herokuapp.com")
+    @CrossOrigin(origins = url)
     @PostMapping("/add")
     public String add(@RequestBody Song song)
     {
         songService.saveSong(song);
         return "New Song is added";
     }
-    @CrossOrigin(origins = "https://alexsherrowspotifyfrontend.herokuapp.com")
+    //Production credentials
+    @CrossOrigin(origins = url)
     @GetMapping("/getAll")
     public List<Song> getAllSongs(){
         return songService.getAllSongs();
