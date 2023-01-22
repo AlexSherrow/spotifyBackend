@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping("/song")
 public class SongController {
     //Production Credentials
-    final String url = "https://alexsherrowspotifyfrontend.herokuapp.com";
+    final String url = "http://www.soundslounge.com/";
 
     //Local Credentials
     //final String url = "http://localhost:3000";
