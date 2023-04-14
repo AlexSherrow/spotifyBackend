@@ -10,22 +10,21 @@ import java.util.List;
 @RequestMapping("/song")
 public class SongController {
     //Production Credentials
-    final String url = "http://www.soundslounge.com/";
+    //final String url = "http://www.soundslounge.com/";
 
     //Local Credentials
-    //final String url = "http://localhost:3000";
+    final String url = "http://localhost:3000";
     @Autowired
     private SongService songService;
     @CrossOrigin(origins = url)
-    @PostMapping("/add")
+    @PostMapping("/addSong")
     public String add(@RequestBody Song song)
     {
         songService.saveSong(song);
         return "New Song is added";
     }
-    //Production credentials
     @CrossOrigin(origins = url)
-    @GetMapping("/getAll")
+    @GetMapping("/getAllSongs")
     public List<Song> getAllSongs(){
         return songService.getAllSongs();
     }
