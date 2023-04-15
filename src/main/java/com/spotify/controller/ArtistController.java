@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping("/artist")
 public class ArtistController {
     //Production Credentials
-    final String url = "http://www.soundslounge.com/";
+    //final String url = "http://www.soundslounge.com/";
 
     //Local Credentials
-    //final String url = "http://localhost:3000";
+    final String url = "http://localhost:3000";
     @Autowired
     private ArtistService artistService;
     @CrossOrigin(origins = url)
