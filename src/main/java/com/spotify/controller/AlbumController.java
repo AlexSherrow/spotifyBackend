@@ -14,8 +14,11 @@ public class AlbumController {
 	
 	@Autowired
 	private AlbumService albumService;
-	
-	final String url = "http://localhost:3000";
+    //Production Credentials
+    
+	final String url = "http://www.soundslounge.com/";
+    //Local credentials
+	//final String url = "http://localhost:3000";
 	
 	@CrossOrigin(origins = url)
 	@PostMapping("/addAlbum")
