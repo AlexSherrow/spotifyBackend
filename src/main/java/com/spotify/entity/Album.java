@@ -9,11 +9,22 @@ public class Album {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	
+	@Column(unique=true)
 	private String name;
 	
 	private int year;
 	
 	private int rating;
+	
+	private String songs;
+
+	public String getSongs() {
+		return songs;
+	}
+
+	public void setSongs(String songs) {
+		this.songs = songs;
+	}
 
 	public int getId() {
 		return id;

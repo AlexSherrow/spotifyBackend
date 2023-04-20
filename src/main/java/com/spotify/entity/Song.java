@@ -14,8 +14,18 @@ public class Song {
     private String artist;
 
     private String url;
+    
+    private String album;
 
-    public Song() {
+    public String getAlbum() {
+		return album;
+	}
+
+	public void setAlbum(String album) {
+		this.album = album;
+	}
+
+	public Song() {
 
     }
 
